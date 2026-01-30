@@ -427,6 +427,13 @@ h2::after {
    ======================================== */
 
 @media (max-width: 768px) {
+    /* Ajustar imagen de portada para móvil */
+    .portada {
+        background-size: contain;
+        background-position: top center;
+        background-color: var(--color-crema);
+    }
+
     .nombres-novios {
         font-size: 2.5rem;
         letter-spacing: 4px;
