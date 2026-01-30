@@ -429,9 +429,12 @@ h2::after {
 @media (max-width: 768px) {
     /* Ajustar imagen de portada para móvil */
     .portada {
-        background-size: contain;
-        background-position: top center;
-        background-color: var(--color-crema);
+        background-size: cover;
+        background-position: top right;
+    }
+
+    .portada .overlay {
+        background: linear-gradient(135deg, rgba(107, 142, 127, 0.15), rgba(74, 107, 94, 0.1));
     }
 
     .nombres-novios {
