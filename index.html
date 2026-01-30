@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========================================
+         CONFIGURACIÓN - CAMBIA AQUÍ TUS DATOS
+         ======================================== -->
+    <script>
+        const CONFIG = {
+            // Nombres de los novios
+            nombres: "Elena & Antonio",
+
+            // Fecha del evento
+            fechaEvento: "2026-09-26T13:00:00", // Formato: YYYY-MM-DDTHH:mm:ss
+            fechaTexto: "26 de Septiembre, 2026",
+            hora: "13:00 hrs",
+
+            // Lugar
+            nombreLugar: "Montecristo",
+            direccion: "P.º de la Libertad, 14, 02326 San Pedro, Albacete",
+            urlMaps: "https://maps.app.goo.gl/wYJxrdjDkqTY11Cf7",
+
+            // Textos personalizados
+            mensajePrincipal: "Nos casamos y queremos compartir este día especial contigo",
+            historia: "Después de 9 años juntos, hemos decidido dar el siguiente paso. Nos encantaría que nos acompañes en este momento tan importante de nuestras vidas.",
+
+            // Imágenes (coloca tus fotos en la carpeta 'imagenes')
+            imagenPortada: "imagenes/portada.jpg",
+            imagenPareja: "imagenes/pareja.jpg",
+            imagenLugar: "imagenes/lugar.jpg",
+
+            // Confirmación de asistencia
+            whatsapp: "+34696292164", // Tu número de WhatsApp
+            textoWhatsApp: "Confirmo mi asistencia a la boda",
+
+            // Música de fondo (opcional, déjalo vacío si no quieres)
+            musicaFondo: "" // Ejemplo: "musica/cancion.mp3"
+        };
+    </script>
+
+    <!-- Música de fondo (opcional) -->
+    <audio id="musicaFondo" loop>
+        <source src="" id="fuenteMusica" type="audio/mpeg">
+    </audio>
+
+    <!-- PORTADA -->
+    <section id="portada" class="seccion portada">
+        <div class="overlay"></div>
+        <div class="contenido-portada">
+            <div class="decoracion-floral top"></div>
+            <h1 class="nombres-novios" id="nombresNovios"></h1>
+            <p class="fecha-boda" id="fechaBoda"></p>
+            <p class="mensaje-principal" id="mensajePrincipal"></p>
+            <div class="flecha-abajo">↓</div>
+            <div class="decoracion-floral bottom"></div>
+        </div>
+    </section>
+
+    <!-- CUENTA REGRESIVA -->
+    <section class="seccion cuenta-regresiva">
+        <div class="contenedor">
+            <h2>Faltan</h2>
+            <div class="contador" id="contador">
+                <div class="tiempo-bloque">
+                    <span class="numero" id="dias">0</span>
+                    <span class="etiqueta">Días</span>
+                </div>
+                <div class="tiempo-bloque">
+                    <span class="numero" id="horas">0</span>
+                    <span class="etiqueta">Horas</span>
+                </div>
+                <div class="tiempo-bloque">
+                    <span class="numero" id="minutos">0</span>
+                    <span class="etiqueta">Minutos</span>
+                </div>
+                <div class="tiempo-bloque">
+                    <span class="numero" id="segundos">0</span>
+                    <span class="etiqueta">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section class="seccion historia">
+        <div class="contenedor">
+            <div class="grid-historia">
+                <div class="texto-historia fade-in">
+                    <h2>Nuestra Historia</h2>
+                    <p id="textoHistoria"></p>
+                </div>
+                <div class="imagen-historia fade-in">
+                    <img id="imagenPareja" src="" alt="Pareja">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETALLES DEL EVENTO -->
+    <section class="seccion detalles">
+        <div class="contenedor">
+            <h2>Detalles del Evento</h2>
+            <div class="grid-detalles">
+                <div class="detalle-card fade-in">
+                    <div class="icono">📅</div>
+                    <h3>Fecha</h3>
+                    <p id="detallesFecha"></p>
+                </div>
+                <div class="detalle-card fade-in">
+                    <div class="icono">🕐</div>
+                    <h3>Hora</h3>
+                    <p id="detallesHora"></p>
+                </div>
+                <div class="detalle-card fade-in">
+                    <div class="icono">📍</div>
+                    <h3>Lugar</h3>
+                    <p id="detallesLugar"></p>
+                    <p class="direccion" id="detallesDireccion"></p>
+                </div>
+            </div>
+            <div class="imagen-lugar fade-in">
+                <img id="imagenLugar" src="" alt="Lugar del evento">
+            </div>
+            <a id="btnMaps" href="" target="_blank" class="btn btn-secundario">Ver en Google Maps</a>
+        </div>
+    </section>
+
+    <!-- CONFIRMACIÓN -->
+    <section class="seccion confirmacion">
+        <div class="contenedor">
+            <h2>Confirma tu Asistencia</h2>
+            <p>Por favor confirma tu asistencia antes del 1 de Junio</p>
+            <a id="btnConfirmar" href="" target="_blank" class="btn btn-principal">Confirmar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Con mucho amor ❤️</p>
+        <p id="footerNombres"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

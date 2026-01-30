@@ -1,0 +1,106 @@
+========================================
+INVITACIÓN DIGITAL DE BODA
+========================================
+
+¡Tu invitación está lista! Solo necesitas personalizarla.
+
+========================================
+PASO 1: AGREGAR TUS IMÁGENES
+========================================
+
+Coloca 3 fotos en la carpeta "imagenes/" con estos nombres:
+
+  📸 portada.jpg    - Foto principal de fondo (recomendado: 1920x1080px)
+  📸 pareja.jpg     - Foto de ustedes dos (recomendado: 800x800px)
+  📸 lugar.jpg      - Foto del lugar del evento (recomendado: 1200x800px)
+
+Puedes usar JPG o PNG. Si usas PNG, cambia la extensión en la configuración.
+
+========================================
+PASO 2: PERSONALIZAR TUS DATOS
+========================================
+
+Abre el archivo: index.html
+
+Al inicio del archivo (después de <script>) encontrarás la sección CONFIG.
+Ahí cambias:
+
+  ✏️  nombres: "Tus nombres"
+  ✏️  fechaEvento: "2026-06-15T18:00:00" (formato: AÑO-MES-DÍATHORA:MINUTO:SEGUNDO)
+  ✏️  fechaTexto: "Como quieres que se vea la fecha"
+  ✏️  hora: "18:00 hrs"
+  ✏️  nombreLugar: "Nombre del lugar"
+  ✏️  direccion: "Dirección completa"
+  ✏️  urlMaps: "Link de Google Maps"
+  ✏️  mensajePrincipal: "Tu mensaje"
+  ✏️  historia: "Tu historia de amor"
+  ✏️  whatsapp: "+34612345678" (tu número de WhatsApp con código de país)
+
+¡Y LISTO! No necesitas tocar nada más.
+
+========================================
+PASO 3: VER TU INVITACIÓN
+========================================
+
+Simplemente abre el archivo "index.html" con tu navegador
+(doble clic o clic derecho > Abrir con > Chrome/Firefox/Edge)
+
+========================================
+PASO 4: PUBLICAR EN INTERNET (GRATIS)
+========================================
+
+Opciones para compartir tu invitación:
+
+1. GITHUB PAGES (Gratis, recomendado):
+   - Crea cuenta en github.com
+   - Sube todos los archivos
+   - Activa GitHub Pages en configuración
+   - Obtienes una URL tipo: tuusuario.github.io/invitacion
+
+2. NETLIFY (Gratis, muy fácil):
+   - Arrastra la carpeta completa a netlify.com/drop
+   - Te da una URL automáticamente
+
+3. VERCEL (Gratis):
+   - Similar a Netlify, muy rápido
+
+========================================
+CARACTERÍSTICAS INCLUIDAS
+========================================
+
+✅ Diseño elegante y profesional
+✅ Cuenta regresiva en tiempo real
+✅ Responsive (se adapta a móvil/tablet/PC)
+✅ Animaciones suaves al hacer scroll
+✅ Botón directo a WhatsApp para confirmar
+✅ Botón a Google Maps
+✅ Sección de portada con foto de fondo
+✅ Historia de la pareja
+✅ Detalles del evento
+✅ Todo configurable en UN solo lugar
+
+========================================
+SOPORTE PARA MÚSICA (OPCIONAL)
+========================================
+
+Si quieres música de fondo:
+
+1. Coloca tu archivo MP3 en la carpeta (ejemplo: musica.mp3)
+2. En CONFIG, cambia:
+   musicaFondo: "musica.mp3"
+
+La música se reproducirá cuando el usuario haga clic en la página.
+
+========================================
+¿NECESITAS AYUDA?
+========================================
+
+Todos los cambios se hacen en la sección CONFIG del archivo index.html
+No necesitas saber programar, solo cambiar los textos entre comillas.
+
+Si algo no funciona, verifica:
+  - Que los nombres de las imágenes coincidan exactamente
+  - Que la fecha tenga el formato correcto
+  - Que el número de WhatsApp tenga el código de país
+
+¡Disfruta tu invitación digital! 💍

@@ -1,0 +1,486 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #6b8e7f;
+    --color-secundario: #4a6b5e;
+    --color-dorado: #c9a961;
+    --color-crema: #fdfcfa;
+    --color-crema-oscuro: #f8f6f3;
+    --color-texto: #2d3436;
+    --fuente-principal: 'Cormorant Garamond', serif;
+    --fuente-secundaria: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.seccion {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-dorado), transparent);
+}
+
+/* ========================================
+   PORTADA
+   ======================================== */
+
+.portada {
+    position: relative;
+    background-color: #fdfcfa;
+    background-image: url('./imagenes/portada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2d3436;
+    text-align: center;
+}
+
+.portada .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(107, 142, 127, 0.05), rgba(74, 107, 94, 0.03));
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease;
+}
+
+.decoracion-floral {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.decoracion-floral.top::before {
+    content: '❋';
+    color: var(--color-dorado);
+    text-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+}
+
+.decoracion-floral.bottom::before {
+    content: '❋';
+    color: var(--color-dorado);
+    text-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+}
+
+.nombres-novios {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 30px 0;
+    color: var(--color-principal);
+    text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+    letter-spacing: 8px;
+    font-family: var(--fuente-principal);
+}
+
+.fecha-boda {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    letter-spacing: 3px;
+    color: var(--color-dorado);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--fuente-secundaria);
+}
+
+.mensaje-principal {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 30px auto;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-texto);
+}
+
+.flecha-abajo {
+    font-size: 3rem;
+    margin-top: 50px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   CUENTA REGRESIVA
+   ======================================== */
+
+.cuenta-regresiva {
+    background: var(--color-crema);
+    min-height: 50vh;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tiempo-bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numero {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-principal);
+    font-family: var(--fuente-principal);
+    display: block;
+    min-width: 100px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.etiqueta {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-principal);
+    font-weight: 500;
+}
+
+/* ========================================
+   HISTORIA
+   ======================================== */
+
+.historia {
+    background: white;
+    min-height: 80vh;
+}
+
+.grid-historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+}
+
+.texto-historia h2 {
+    margin-bottom: 30px;
+}
+
+.texto-historia p {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #555;
+}
+
+.imagen-historia img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagen-historia img:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================
+   DETALLES DEL EVENTO
+   ======================================== */
+
+.detalles {
+    background: var(--color-crema-oscuro);
+    min-height: 100vh;
+}
+
+.grid-detalles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.detalle-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.icono {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.detalle-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.detalle-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.direccion {
+    font-size: 0.95rem !important;
+    color: #888 !important;
+    margin-top: 5px;
+}
+
+.imagen-lugar {
+    margin: 50px 0;
+}
+
+.imagen-lugar img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: var(--fuente-secundaria);
+    letter-spacing: 1px;
+}
+
+.btn-principal {
+    background: var(--color-principal);
+    color: white;
+}
+
+.btn-principal:hover {
+    background: var(--color-dorado);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(107, 142, 127, 0.3);
+}
+
+.btn-secundario {
+    background: white;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+.btn-secundario:hover {
+    background: var(--color-principal);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(107, 142, 127, 0.2);
+}
+
+/* ========================================
+   CONFIRMACIÓN
+   ======================================== */
+
+.confirmacion {
+    background: linear-gradient(135deg, var(--color-secundario), var(--color-principal));
+    color: white;
+    min-height: 60vh;
+    position: relative;
+}
+
+.confirmacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1), transparent);
+}
+
+.confirmacion h2,
+.confirmacion p {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.confirmacion h2::after {
+    background: linear-gradient(90deg, transparent, var(--color-dorado), transparent);
+}
+
+.confirmacion p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background: #2c2c2c;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+/* ========================================
+   ANIMACIONES DE SCROLL
+   ======================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .nombres-novios {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .fecha-boda {
+        font-size: 1.2rem;
+    }
+
+    .mensaje-principal {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .grid-historia {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .texto-historia {
+        text-align: center;
+    }
+
+    .contador {
+        gap: 20px;
+    }
+
+    .numero {
+        font-size: 2.5rem;
+        min-width: 70px;
+        padding: 15px;
+    }
+
+    .etiqueta {
+        font-size: 0.85rem;
+    }
+
+    .grid-detalles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nombres-novios {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .numero {
+        font-size: 2rem;
+        min-width: 60px;
+        padding: 10px;
+    }
+}
