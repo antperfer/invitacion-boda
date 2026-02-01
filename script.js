@@ -44,8 +44,10 @@ function cargarConfiguracion() {
     document.getElementById('btnMaps').href = CONFIG.urlMaps;
 
     // WhatsApp
-    const urlWhatsApp = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.textoWhatsApp)}`;
-    document.getElementById('btnConfirmar').href = urlWhatsApp;
+    const urlWhatsAppAntonio = `https://wa.me/${CONFIG.whatsappAntonio}?text=${encodeURIComponent(CONFIG.textoWhatsApp)}`;
+    const urlWhatsAppElena = `https://wa.me/${CONFIG.whatsappElena}?text=${encodeURIComponent(CONFIG.textoWhatsApp)}`;
+    document.getElementById('btnConfirmarAntonio').href = urlWhatsAppAntonio;
+    document.getElementById('btnConfirmarElena').href = urlWhatsAppElena;
 }
 
 // ========================================

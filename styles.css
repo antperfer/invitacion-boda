@@ -389,7 +389,20 @@ h2::after {
 
 .confirmacion p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.botones-whatsapp {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botones-whatsapp .btn {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
 }
 
 /* ========================================
