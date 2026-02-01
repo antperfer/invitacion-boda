@@ -444,8 +444,9 @@ h2::after {
 @media (max-width: 768px) {
     /* Ajustar imagen de portada para móvil */
     .portada {
+        background-image: url('./imagenes/portadamovil.png') !important;
         background-size: cover;
-        background-position: top right;
+        background-position: center;
     }
 
     .portada .overlay {
