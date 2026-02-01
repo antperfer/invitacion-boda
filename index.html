@@ -20,10 +20,19 @@
             fechaTexto: "26 de Septiembre, 2026",
             hora: "13:00 hrs",
 
-            // Lugar
-            nombreLugar: "Montecristo",
-            direccion: "P.º de la Libertad, 14, 02326 San Pedro, Albacete",
-            urlMaps: "https://maps.app.goo.gl/wYJxrdjDkqTY11Cf7",
+            // Ceremonia Civil
+            nombreCeremonia: "Ayuntamiento de Pozuelo",
+            horaCeremonia: "12:00 hrs",
+            direccionCeremonia: "Calle Mayor, 25, 02327 Pozuelo, Albacete",
+            urlMapsCeremonia: "https://maps.app.goo.gl/bK4DTm7J2iDzxEzS8",
+            imagenCeremonia: "imagenes/ayuntamiento.jpg",
+
+            // Lugar de Celebración
+            nombreCelebracion: "Restaurante Montecristo",
+            horaCelebracion: "13:00 hrs",
+            direccionCelebracion: "P.º de la Libertad, 14, 02326 San Pedro, Albacete",
+            urlMapsCelebracion: "https://maps.app.goo.gl/wYJxrdjDkqTY11Cf7",
+            imagenCelebracion: "imagenes/lugar.jpg",
 
             // Textos personalizados
             mensajePrincipal: "Nos casamos y queremos compartir este día especial contigo",
@@ -106,28 +115,38 @@
     <section class="seccion detalles">
         <div class="contenedor">
             <h2>Detalles del Evento</h2>
-            <div class="grid-detalles">
-                <div class="detalle-card fade-in">
-                    <div class="icono">📅</div>
-                    <h3>Fecha</h3>
-                    <p id="detallesFecha"></p>
-                </div>
-                <div class="detalle-card fade-in">
-                    <div class="icono">🕐</div>
-                    <h3>Hora</h3>
-                    <p id="detallesHora"></p>
-                </div>
-                <div class="detalle-card fade-in">
-                    <div class="icono">📍</div>
-                    <h3>Lugar</h3>
-                    <p id="detallesLugar"></p>
-                    <p class="direccion" id="detallesDireccion"></p>
+
+            <!-- Ceremonia Civil -->
+            <div class="evento-card fade-in">
+                <h3 class="evento-titulo">Ceremonia Civil</h3>
+                <div class="evento-contenido">
+                    <div class="evento-imagen">
+                        <img id="imagenCeremonia" src="" alt="Ceremonia">
+                    </div>
+                    <div class="evento-info">
+                        <p class="lugar-nombre" id="nombreCeremonia"></p>
+                        <p class="evento-hora" id="horaCeremonia"></p>
+                        <p class="evento-direccion" id="direccionCeremonia"></p>
+                        <a id="btnMapsCeremonia" href="" target="_blank" class="btn btn-secundario btn-maps">Ver en Google Maps</a>
+                    </div>
                 </div>
             </div>
-            <div class="imagen-lugar fade-in">
-                <img id="imagenLugar" src="" alt="Lugar del evento">
+
+            <!-- Lugar de Celebración -->
+            <div class="evento-card fade-in">
+                <h3 class="evento-titulo">Lugar de Celebración</h3>
+                <div class="evento-contenido">
+                    <div class="evento-imagen">
+                        <img id="imagenCelebracion" src="" alt="Celebración">
+                    </div>
+                    <div class="evento-info">
+                        <p class="lugar-nombre" id="nombreCelebracion"></p>
+                        <p class="evento-hora" id="horaCelebracion"></p>
+                        <p class="evento-direccion" id="direccionCelebracion"></p>
+                        <a id="btnMapsCelebracion" href="" target="_blank" class="btn btn-secundario btn-maps">Ver en Google Maps</a>
+                    </div>
+                </div>
             </div>
-            <a id="btnMaps" href="" target="_blank" class="btn btn-secundario">Ver en Google Maps</a>
         </div>
     </section>
 

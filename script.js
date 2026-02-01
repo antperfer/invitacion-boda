@@ -20,14 +20,20 @@ function cargarConfiguracion() {
 
     // Fecha
     document.getElementById('fechaBoda').textContent = CONFIG.fechaTexto;
-    document.getElementById('detallesFecha').textContent = CONFIG.fechaTexto;
 
-    // Hora
-    document.getElementById('detallesHora').textContent = CONFIG.hora;
+    // Ceremonia Civil
+    document.getElementById('nombreCeremonia').textContent = CONFIG.nombreCeremonia;
+    document.getElementById('horaCeremonia').textContent = CONFIG.horaCeremonia;
+    document.getElementById('direccionCeremonia').textContent = CONFIG.direccionCeremonia;
+    document.getElementById('imagenCeremonia').src = CONFIG.imagenCeremonia;
+    document.getElementById('btnMapsCeremonia').href = CONFIG.urlMapsCeremonia;
 
-    // Lugar
-    document.getElementById('detallesLugar').textContent = CONFIG.nombreLugar;
-    document.getElementById('detallesDireccion').textContent = CONFIG.direccion;
+    // Lugar de Celebración
+    document.getElementById('nombreCelebracion').textContent = CONFIG.nombreCelebracion;
+    document.getElementById('horaCelebracion').textContent = CONFIG.horaCelebracion;
+    document.getElementById('direccionCelebracion').textContent = CONFIG.direccionCelebracion;
+    document.getElementById('imagenCelebracion').src = CONFIG.imagenCelebracion;
+    document.getElementById('btnMapsCelebracion').href = CONFIG.urlMapsCelebracion;
 
     // Mensaje
     document.getElementById('mensajePrincipal').textContent = CONFIG.mensajePrincipal;
@@ -38,10 +44,6 @@ function cargarConfiguracion() {
     // Imágenes
     document.querySelector('.portada').style.backgroundImage = `url('${CONFIG.imagenPortada}')`;
     document.getElementById('imagenPareja').src = CONFIG.imagenPareja;
-    document.getElementById('imagenLugar').src = CONFIG.imagenLugar;
-
-    // Enlaces
-    document.getElementById('btnMaps').href = CONFIG.urlMaps;
 
     // WhatsApp
     const urlWhatsAppAntonio = `https://wa.me/${CONFIG.whatsappAntonio}?text=${encodeURIComponent(CONFIG.textoWhatsApp)}`;
