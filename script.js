@@ -126,16 +126,34 @@ function configurarMusica() {
     if (CONFIG.musicaFondo && CONFIG.musicaFondo.trim() !== '') {
         const audio = document.getElementById('musicaFondo');
         const fuente = document.getElementById('fuenteMusica');
+        const botonMusica = document.getElementById('botonMusica');
+        const iconoMusica = document.querySelector('.icono-musica');
 
         fuente.src = CONFIG.musicaFondo;
         audio.load();
 
-        // La música se reproduce automáticamente al hacer clic en la página
-        // (los navegadores no permiten autoplay sin interacción del usuario)
-        document.body.addEventListener('click', () => {
-            audio.play().catch(error => {
-                console.log('No se pudo reproducir la música:', error);
-            });
-        }, { once: true });
+        // Control de play/pause con el botón
+        botonMusica.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    botonMusica.classList.add('reproduciendo');
+                    iconoMusica.textContent = '♪';
+                    botonMusica.title = 'Pausar música';
+                }).catch(error => {
+                    console.log('No se pudo reproducir la música:', error);
+                });
+            } else {
+                audio.pause();
+                botonMusica.classList.remove('reproduciendo');
+                iconoMusica.textContent = '♫';
+                botonMusica.title = 'Reproducir música';
+            }
+        });
+    } else {
+        // Si no hay música configurada, ocultar el botón
+        const botonMusica = document.getElementById('botonMusica');
+        if (botonMusica) {
+            botonMusica.style.display = 'none';
+        }
     }
 }
