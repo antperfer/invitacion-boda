@@ -780,19 +780,20 @@ h2::after {
 
     /* Sobre responsive */
     .sobre-wrapper {
-        width: 92vw;
-        height: 60vh;
-        max-height: 500px;
+        width: 95vw;
+        height: 50vh;
+        max-width: none;
+        max-height: 400px;
     }
 
     .sello-cera {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         top: 52%;
     }
 
     .sello-texto {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -810,19 +811,21 @@ h2::after {
 
     /* Sobre en móviles pequeños */
     .sobre-wrapper {
-        width: 95vw;
-        height: 55vh;
-        max-height: 400px;
+        width: 98vw;
+        height: 45vh;
+        max-width: none;
+        max-height: 350px;
+        min-height: 280px;
     }
 
     .sello-cera {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
         top: 52%;
     }
 
     .sello-texto {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .imagen-historia {
@@ -831,5 +834,50 @@ h2::after {
 
     .carrusel-fotos {
         min-height: 250px;
+    }
+}
+
+/* ========================================
+   ORIENTACIÓN PORTRAIT EN MÓVILES
+   ======================================== */
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .sobre-wrapper {
+        width: 96vw;
+        height: 40vh;
+        max-height: 320px;
+        min-height: 260px;
+    }
+
+    .sobre-solapa {
+        height: 50%;
+    }
+
+    .sello-cera {
+        top: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .sello-texto {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .sobre-wrapper {
+        width: 98vw;
+        height: 38vh;
+        max-height: 300px;
+        min-height: 240px;
+    }
+
+    .sello-cera {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sello-texto {
+        font-size: 1.3rem;
     }
 }
