@@ -809,9 +809,9 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Ajustar dimensiones (se invierten por la rotación) */
-        width: 85vh;
-        height: 90vw;
+        /* Ajustar dimensiones para ocupar toda la pantalla (se invierten por la rotación) */
+        width: 100vh;
+        height: 140vw;
         max-width: none;
         max-height: none;
     }
@@ -825,12 +825,19 @@ h2::after {
     }
 
     .sello-cera {
-        width: 85px;
-        height: 85px;
+        width: 95px;
+        height: 95px;
+        /* Rotar el sello -90° para compensar la rotación del sobre */
+        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    /* Mantener rotación al abrir */
+    .sobre-wrapper.abierto .sello-cera {
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
     }
 }
 
@@ -838,9 +845,9 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Ajustar dimensiones (se invierten por la rotación) */
-        width: 80vh;
-        height: 95vw;
+        /* Ajustar dimensiones para ocupar toda la pantalla (se invierten por la rotación) */
+        width: 100vh;
+        height: 150vw;
         max-width: none;
         max-height: none;
     }
@@ -850,11 +857,18 @@ h2::after {
     }
 
     .sello-cera {
-        width: 75px;
-        height: 75px;
+        width: 85px;
+        height: 85px;
+        /* Rotar el sello -90° para compensar la rotación del sobre */
+        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+
+    /* Mantener rotación al abrir */
+    .sobre-wrapper.abierto .sello-cera {
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
     }
 }
