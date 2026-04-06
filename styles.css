@@ -795,10 +795,10 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* width=100vw ocupa TODO el alto de la pantalla después de rotar */
-        /* height=50vh es el ancho del sobre después de rotar */
-        width: 100vw;
-        height: 50vh;
+        /* width=100vh ocupa TODO el alto de la pantalla después de rotar */
+        /* height=50vw es el ancho del sobre después de rotar */
+        width: 100vh;
+        height: 50vw;
         max-width: none;
         max-height: none;
     }
@@ -840,10 +840,10 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* width=100vw ocupa TODO el alto de la pantalla después de rotar */
-        /* height=55vh es el ancho del sobre después de rotar */
-        width: 100vw;
-        height: 55vh;
+        /* width=100vh ocupa TODO el alto de la pantalla después de rotar */
+        /* height=55vw es el ancho del sobre después de rotar */
+        width: 100vh;
+        height: 55vw;
         max-width: none;
         max-height: none;
     }
