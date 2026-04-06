@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     configurarAnimaciones();
     configurarMusica();
     configurarSobre();
+    iniciarCarruselFotos();
 });
 
 // ========================================
@@ -44,7 +45,6 @@ function cargarConfiguracion() {
 
     // Imágenes
     document.querySelector('.portada').style.backgroundImage = `url('${CONFIG.imagenPortada}')`;
-    document.getElementById('imagenPareja').src = CONFIG.imagenPareja;
 
     // WhatsApp
     const urlWhatsAppAntonio = `https://wa.me/${CONFIG.whatsappAntonio}?text=${encodeURIComponent(CONFIG.textoWhatsApp)}`;
@@ -162,6 +162,27 @@ function configurarSobre() {
             sobreContainer.classList.add('oculto');
             // Restaurar scroll
             document.body.style.overflow = 'auto';
-        }, 1200);
+        }, 1500);
     });
+}
+
+// ========================================
+// CARRUSEL DE FOTOS
+// ========================================
+
+function iniciarCarruselFotos() {
+    const fotos = document.querySelectorAll('.foto-pareja');
+    let indiceActual = 0;
+
+    // Cambiar foto cada 4 segundos
+    setInterval(() => {
+        // Quitar clase activa de la foto actual
+        fotos[indiceActual].classList.remove('activa');
+
+        // Pasar a la siguiente foto
+        indiceActual = (indiceActual + 1) % fotos.length;
+
+        // Añadir clase activa a la nueva foto
+        fotos[indiceActual].classList.add('activa');
+    }, 4000); // 4000ms = 4 segundos
 }
