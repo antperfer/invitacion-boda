@@ -478,27 +478,16 @@ h2::after {
 
 .sobre-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(ellipse at center, #e0e8e5 0%, #cbd5d1 40%, #b5c2bd 100%);
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
     transition: opacity 1s ease, visibility 1s ease;
-}
-
-.sobre-container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(107, 142, 127, 0.08) 0%, transparent 40%);
-    pointer-events: none;
+    overflow: hidden;
 }
 
 .sobre-container.oculto {
@@ -509,12 +498,11 @@ h2::after {
 
 .sobre-wrapper {
     position: relative;
-    width: 85vw;
-    max-width: 1000px;
-    height: 70vh;
-    max-height: 650px;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
     cursor: pointer;
-    transition: transform 0.3s ease;
     perspective: 2000px;
 }
 
@@ -792,46 +780,13 @@ h2::after {
         padding: 10px;
     }
 
-    /* Contenedor ocupa toda la pantalla sin overflow */
-    .sobre-container {
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .sobre-wrapper {
-        /* Rotar 90 grados para orientación vertical */
-        transform: rotate(90deg);
-        /* Dimensiones GRANDES para garantizar cobertura total */
-        width: 150vh;
-        height: 150vw;
-        max-width: none;
-        max-height: none;
-    }
-
-    .sobre-wrapper:hover {
-        transform: rotate(90deg) scale(1.01);
-    }
-
-    /* Quitar border-radius en móvil para pantalla completa */
-    .sobre-cuerpo,
-    .sobre-solapa {
-        border-radius: 0;
-    }
-
     .sello-cera {
-        width: 100px;
-        height: 100px;
-        /* Rotar el sello -90° para compensar la rotación del sobre */
-        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 90px;
+        height: 90px;
     }
 
     .sello-texto {
-        font-size: 1.8rem;
-    }
-
-    /* Mantener rotación al abrir */
-    .sobre-wrapper.abierto .sello-cera {
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
+        font-size: 1.6rem;
     }
 
     .imagen-historia {
@@ -848,49 +803,12 @@ h2::after {
    ======================================== */
 
 @media (max-width: 768px) {
-    /* Contenedor ocupa toda la pantalla sin overflow */
-    .sobre-container {
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .sobre-wrapper {
-        /* Rotar 90 grados para orientación vertical */
-        transform: rotate(90deg);
-        /* Dimensiones GRANDES para garantizar cobertura total */
-        width: 150vh;
-        height: 150vw;
-        max-width: none;
-        max-height: none;
-    }
-
-    .sobre-wrapper:hover {
-        transform: rotate(90deg) scale(1.01);
-    }
-
-    .sobre-wrapper.abierto .sobre-cerrado {
-        transform: scale(0.98);
-    }
-
-    /* Quitar border-radius en móvil para pantalla completa */
-    .sobre-cuerpo,
-    .sobre-solapa {
-        border-radius: 0;
-    }
-
     .sello-cera {
-        width: 110px;
-        height: 110px;
-        /* Rotar el sello -90° para compensar la rotación del sobre */
-        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100px;
+        height: 100px;
     }
 
     .sello-texto {
-        font-size: 2rem;
-    }
-
-    /* Mantener rotación al abrir */
-    .sobre-wrapper.abierto .sello-cera {
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
+        font-size: 1.8rem;
     }
 }
