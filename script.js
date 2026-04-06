@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     iniciarCuentaRegresiva();
     configurarAnimaciones();
     configurarMusica();
+    configurarSobre();
 });
 
 // ========================================
@@ -138,4 +139,29 @@ function configurarMusica() {
             });
         }, { once: true });
     }
+}
+
+// ========================================
+// SOBRE DE ENTRADA
+// ========================================
+
+function configurarSobre() {
+    const sobreContainer = document.getElementById('sobreEntrada');
+    const sobreWrapper = sobreContainer.querySelector('.sobre-wrapper');
+
+    // Prevenir scroll mientras el sobre está visible
+    document.body.style.overflow = 'hidden';
+
+    // Al hacer clic en el sobre
+    sobreWrapper.addEventListener('click', () => {
+        // Añadir clase de apertura
+        sobreWrapper.classList.add('abierto');
+
+        // Después de la animación de apertura, ocultar el sobre
+        setTimeout(() => {
+            sobreContainer.classList.add('oculto');
+            // Restaurar scroll
+            document.body.style.overflow = 'auto';
+        }, 1200);
+    });
 }
