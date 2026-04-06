@@ -795,10 +795,9 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* width=100vh ocupa TODO el alto de la pantalla después de rotar */
-        /* height=50vw es el ancho del sobre después de rotar */
+        /* Dimensiones aumentadas para ocupar TODA la pantalla */
         width: 100vh;
-        height: 50vw;
+        height: 100vw;
         max-width: none;
         max-height: none;
     }
@@ -807,15 +806,21 @@ h2::after {
         transform: rotate(90deg) scale(1.01);
     }
 
+    /* Quitar border-radius en móvil para pantalla completa */
+    .sobre-cuerpo,
+    .sobre-solapa {
+        border-radius: 0;
+    }
+
     .sello-cera {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
         /* Rotar el sello -90° para compensar la rotación del sobre */
         transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
     /* Mantener rotación al abrir */
@@ -840,10 +845,9 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* width=100vh ocupa TODO el alto de la pantalla después de rotar */
-        /* height=55vw es el ancho del sobre después de rotar */
+        /* Dimensiones aumentadas para ocupar TODA la pantalla */
         width: 100vh;
-        height: 55vw;
+        height: 100vw;
         max-width: none;
         max-height: none;
     }
@@ -856,15 +860,21 @@ h2::after {
         transform: scale(0.98);
     }
 
+    /* Quitar border-radius en móvil para pantalla completa */
+    .sobre-cuerpo,
+    .sobre-solapa {
+        border-radius: 0;
+    }
+
     .sello-cera {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
         /* Rotar el sello -90° para compensar la rotación del sobre */
         transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
 
     /* Mantener rotación al abrir */
