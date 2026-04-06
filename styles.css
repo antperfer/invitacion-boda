@@ -792,12 +792,18 @@ h2::after {
         padding: 10px;
     }
 
+    /* Contenedor ocupa toda la pantalla sin overflow */
+    .sobre-container {
+        overflow: hidden;
+        padding: 0;
+    }
+
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Dimensiones aumentadas para ocupar TODA la pantalla */
-        width: 100vh;
-        height: 100vw;
+        /* Dimensiones GRANDES para garantizar cobertura total */
+        width: 150vh;
+        height: 150vw;
         max-width: none;
         max-height: none;
     }
@@ -842,12 +848,18 @@ h2::after {
    ======================================== */
 
 @media (max-width: 768px) {
+    /* Contenedor ocupa toda la pantalla sin overflow */
+    .sobre-container {
+        overflow: hidden;
+        padding: 0;
+    }
+
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Dimensiones aumentadas para ocupar TODA la pantalla */
-        width: 100vh;
-        height: 100vw;
+        /* Dimensiones GRANDES para garantizar cobertura total */
+        width: 150vh;
+        height: 150vw;
         max-width: none;
         max-height: none;
     }
