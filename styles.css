@@ -778,23 +778,6 @@ h2::after {
         font-size: 1.5rem;
     }
 
-    /* Sobre responsive */
-    .sobre-wrapper {
-        width: 95vw;
-        height: 50vh;
-        max-width: none;
-        max-height: 400px;
-    }
-
-    .sello-cera {
-        width: 90px;
-        height: 90px;
-        top: 52%;
-    }
-
-    .sello-texto {
-        font-size: 1.6rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -809,25 +792,6 @@ h2::after {
         padding: 10px;
     }
 
-    /* Sobre en móviles pequeños */
-    .sobre-wrapper {
-        width: 98vw;
-        height: 45vh;
-        max-width: none;
-        max-height: 350px;
-        min-height: 280px;
-    }
-
-    .sello-cera {
-        width: 75px;
-        height: 75px;
-        top: 52%;
-    }
-
-    .sello-texto {
-        font-size: 1.4rem;
-    }
-
     .imagen-historia {
         min-height: 250px;
     }
@@ -838,46 +802,59 @@ h2::after {
 }
 
 /* ========================================
-   ORIENTACIÓN PORTRAIT EN MÓVILES
+   ROTACIÓN DEL SOBRE EN MÓVILES
    ======================================== */
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) {
     .sobre-wrapper {
-        width: 96vw;
-        height: 40vh;
-        max-height: 320px;
-        min-height: 260px;
+        /* Rotar 90 grados para orientación vertical */
+        transform: rotate(90deg);
+        /* Ajustar dimensiones (se invierten por la rotación) */
+        width: 85vh;
+        height: 90vw;
+        max-width: none;
+        max-height: none;
     }
 
-    .sobre-solapa {
-        height: 50%;
+    .sobre-wrapper:hover {
+        transform: rotate(90deg) scale(1.01);
+    }
+
+    .sobre-wrapper.abierto .sobre-cerrado {
+        transform: scale(0.98);
     }
 
     .sello-cera {
-        top: 50%;
-        width: 80px;
-        height: 80px;
+        width: 85px;
+        height: 85px;
     }
 
     .sello-texto {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
-@media (max-width: 480px) and (orientation: portrait) {
+@media (max-width: 480px) {
     .sobre-wrapper {
-        width: 98vw;
-        height: 38vh;
-        max-height: 300px;
-        min-height: 240px;
+        /* Rotar 90 grados para orientación vertical */
+        transform: rotate(90deg);
+        /* Ajustar dimensiones (se invierten por la rotación) */
+        width: 80vh;
+        height: 95vw;
+        max-width: none;
+        max-height: none;
+    }
+
+    .sobre-wrapper:hover {
+        transform: rotate(90deg) scale(1.01);
     }
 
     .sello-cera {
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
     }
 
     .sello-texto {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
