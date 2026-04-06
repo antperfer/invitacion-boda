@@ -792,6 +792,37 @@ h2::after {
         padding: 10px;
     }
 
+    .sobre-wrapper {
+        /* Rotar 90 grados para orientación vertical */
+        transform: rotate(90deg);
+        /* width=100vw ocupa TODO el alto de la pantalla después de rotar */
+        /* height=50vh es el ancho del sobre después de rotar */
+        width: 100vw;
+        height: 50vh;
+        max-width: none;
+        max-height: none;
+    }
+
+    .sobre-wrapper:hover {
+        transform: rotate(90deg) scale(1.01);
+    }
+
+    .sello-cera {
+        width: 90px;
+        height: 90px;
+        /* Rotar el sello -90° para compensar la rotación del sobre */
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    .sello-texto {
+        font-size: 1.7rem;
+    }
+
+    /* Mantener rotación al abrir */
+    .sobre-wrapper.abierto .sello-cera {
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
+    }
+
     .imagen-historia {
         min-height: 250px;
     }
@@ -809,10 +840,10 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* width se convierte en ALTO visual, height se convierte en ANCHO visual */
-        /* Para ocupar toda la pantalla vertical: width=casi todo el ancho disponible (90vw) */
-        width: 90vw;
-        height: 65vh;
+        /* width=100vw ocupa TODO el alto de la pantalla después de rotar */
+        /* height=55vh es el ancho del sobre después de rotar */
+        width: 100vw;
+        height: 55vh;
         max-width: none;
         max-height: none;
     }
@@ -826,47 +857,14 @@ h2::after {
     }
 
     .sello-cera {
-        width: 95px;
-        height: 95px;
+        width: 100px;
+        height: 100px;
         /* Rotar el sello -90° para compensar la rotación del sobre */
         transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
-        font-size: 1.8rem;
-    }
-
-    /* Mantener rotación al abrir */
-    .sobre-wrapper.abierto .sello-cera {
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
-    }
-}
-
-@media (max-width: 480px) {
-    .sobre-wrapper {
-        /* Rotar 90 grados para orientación vertical */
-        transform: rotate(90deg);
-        /* width se convierte en ALTO visual, height se convierte en ANCHO visual */
-        /* Para ocupar toda la pantalla vertical: width=casi todo el ancho disponible (95vw) */
-        width: 95vw;
-        height: 60vh;
-        max-width: none;
-        max-height: none;
-    }
-
-    .sobre-wrapper:hover {
-        transform: rotate(90deg) scale(1.01);
-    }
-
-    .sello-cera {
-        width: 85px;
-        height: 85px;
-        /* Rotar el sello -90° para compensar la rotación del sobre */
-        transform: translate(-50%, -50%) rotate(-90deg);
-    }
-
-    .sello-texto {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
     }
 
     /* Mantener rotación al abrir */
