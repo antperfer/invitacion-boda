@@ -809,9 +809,10 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Ajustar dimensiones para ocupar toda la pantalla (se invierten por la rotación) */
-        width: 100vh;
-        height: 140vw;
+        /* width se convierte en ALTO visual, height se convierte en ANCHO visual */
+        /* Para ocupar toda la pantalla vertical: width=casi todo el ancho disponible (90vw) */
+        width: 90vw;
+        height: 65vh;
         max-width: none;
         max-height: none;
     }
@@ -845,9 +846,10 @@ h2::after {
     .sobre-wrapper {
         /* Rotar 90 grados para orientación vertical */
         transform: rotate(90deg);
-        /* Ajustar dimensiones para ocupar toda la pantalla (se invierten por la rotación) */
-        width: 100vh;
-        height: 150vw;
+        /* width se convierte en ALTO visual, height se convierte en ANCHO visual */
+        /* Para ocupar toda la pantalla vertical: width=casi todo el ancho disponible (95vw) */
+        width: 95vw;
+        height: 60vh;
         max-width: none;
         max-height: none;
     }
