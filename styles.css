@@ -780,13 +780,26 @@ h2::after {
         padding: 10px;
     }
 
+    .sobre-wrapper {
+        transform: rotate(90deg);
+    }
+
+    .sobre-wrapper:hover {
+        transform: rotate(90deg) scale(1.01);
+    }
+
     .sello-cera {
         width: 90px;
         height: 90px;
+        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
         font-size: 1.6rem;
+    }
+
+    .sobre-wrapper.abierto .sello-cera {
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
     }
 
     .imagen-historia {
@@ -803,12 +816,29 @@ h2::after {
    ======================================== */
 
 @media (max-width: 768px) {
+    .sobre-wrapper {
+        transform: rotate(90deg);
+    }
+
+    .sobre-wrapper:hover {
+        transform: rotate(90deg) scale(1.01);
+    }
+
+    .sobre-wrapper.abierto .sobre-cerrado {
+        transform: scale(0.98);
+    }
+
     .sello-cera {
         width: 100px;
         height: 100px;
+        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
         font-size: 1.8rem;
+    }
+
+    .sobre-wrapper.abierto .sello-cera {
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
     }
 }
