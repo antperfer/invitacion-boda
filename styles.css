@@ -481,7 +481,9 @@ h2::after {
     inset: 0;
     width: 100vw;
     height: 100dvh;
-    background: #ffffff;
+    background:
+        radial-gradient(circle at top, rgba(201, 169, 97, 0.18), transparent 32%),
+        linear-gradient(180deg, #f4efe8 0%, #fbf8f3 45%, #f0ebe4 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -780,18 +782,9 @@ h2::after {
         padding: 10px;
     }
 
-    .sobre-wrapper {
-        transform: rotate(90deg);
-    }
-
-    .sobre-wrapper:hover {
-        transform: rotate(90deg) scale(1.01);
-    }
-
     .sello-cera {
         width: 90px;
         height: 90px;
-        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
@@ -799,7 +792,7 @@ h2::after {
     }
 
     .sobre-wrapper.abierto .sello-cera {
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
+        transform: translate(-50%, -50%) scale(0) rotate(360deg);
     }
 
     .imagen-historia {
@@ -816,12 +809,33 @@ h2::after {
    ======================================== */
 
 @media (max-width: 768px) {
+    .sobre-container {
+        padding: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
     .sobre-wrapper {
-        transform: rotate(90deg);
+        width: min(100%, 430px);
+        height: min(72dvh, 620px);
+        max-height: 620px;
     }
 
     .sobre-wrapper:hover {
-        transform: rotate(90deg) scale(1.01);
+        transform: scale(1.01);
+    }
+
+    .sobre-cuerpo {
+        border-radius: 18px;
+        box-shadow:
+            0 24px 60px rgba(82, 58, 32, 0.18),
+            inset 0 2px 10px rgba(255, 255, 255, 0.9),
+            inset 0 -2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .sobre-solapa {
+        height: 50%;
+        border-radius: 18px 18px 0 0;
     }
 
     .sobre-wrapper.abierto .sobre-cerrado {
@@ -831,7 +845,6 @@ h2::after {
     .sello-cera {
         width: 100px;
         height: 100px;
-        transform: translate(-50%, -50%) rotate(-90deg);
     }
 
     .sello-texto {
@@ -839,6 +852,6 @@ h2::after {
     }
 
     .sobre-wrapper.abierto .sello-cera {
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0) rotate(360deg);
+        transform: translate(-50%, -50%) scale(0) rotate(360deg);
     }
 }
