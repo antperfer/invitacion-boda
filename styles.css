@@ -113,7 +113,7 @@ h2::after {
 }
 
 .nombres-novios {
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: 400;
     margin: 30px 0;
     color: var(--color-principal);
@@ -708,7 +708,7 @@ h2::after {
     }
 
     .nombres-novios {
-        font-size: 3.5rem;
+        font-size: 4.9rem;
         letter-spacing: 2px;
     }
 
@@ -772,7 +772,7 @@ h2::after {
 
 @media (max-width: 480px) {
     .nombres-novios {
-        font-size: 3.2rem;
+        font-size: 3.1rem;
         letter-spacing: 1px;
     }
 
