@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================
 
 function cargarConfiguracion() {
-    // Nombres
-    document.getElementById('nombresNovios').textContent = CONFIG.nombres;
+    // Nombres - Formato: Elena arriba, y en medio, Antonio abajo
+    const nombres = CONFIG.nombres.split(' y ');
+    const nombreFormateado = `${nombres[0]}<br>y<br>${nombres[1]}`;
+    document.getElementById('nombresNovios').innerHTML = nombreFormateado;
     document.getElementById('footerNombres').textContent = CONFIG.nombres;
 
     // Fecha
