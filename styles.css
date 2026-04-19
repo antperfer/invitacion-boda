@@ -707,12 +707,12 @@ h2::after {
     }
 
     .nombres-novios {
-        font-size: 5.5rem;
+        font-size: 6.5rem;
         letter-spacing: 2px;
     }
 
     .fecha-boda {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .mensaje-principal {
@@ -771,8 +771,12 @@ h2::after {
 
 @media (max-width: 480px) {
     .nombres-novios {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
         letter-spacing: 1px;
+    }
+
+    .fecha-boda {
+        font-size: 0.95rem;
     }
 
     .numero {
