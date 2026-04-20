@@ -117,7 +117,12 @@ h2::after {
     text-shadow: 0 2px 10px rgba(255,255,255,0.8);
     letter-spacing: 3px;
     font-family: 'MonteCarlo', cursive;
-    line-height: 1.2;
+    line-height: 1.5;
+}
+
+.y-pequena {
+    font-size: 0.5em;
+    display: inline-block;
 }
 
 .fecha-boda {
@@ -146,6 +151,7 @@ h2::after {
     margin-top: 50px;
     animation: bounce 2s infinite;
     cursor: pointer;
+    color: var(--color-principal);
 }
 
 @keyframes bounce {
