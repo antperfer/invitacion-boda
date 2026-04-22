@@ -20,7 +20,6 @@ function cargarConfiguracion() {
     const nombres = CONFIG.nombres.split(' y ');
     const nombreFormateado = `${nombres[0]}<br><span class="y-pequena">y</span><br>${nombres[1]}`;
     document.getElementById('nombresNovios').innerHTML = nombreFormateado;
-    document.getElementById('footerNombres').textContent = CONFIG.nombres;
 
     // Fecha
     document.getElementById('fechaBoda').textContent = CONFIG.fechaTexto;
