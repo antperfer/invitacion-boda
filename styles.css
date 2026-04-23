@@ -715,16 +715,15 @@ h2::after {
     .nombres-novios {
         font-size: 8.5rem;
         letter-spacing: 2px;
-        line-height: 1.05;
+        line-height: 0.85;
     }
 
     .y-pequena {
         font-size: 0.7em;
-        margin-top: -40px;
     }
 
     .fecha-boda {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         letter-spacing: 2px;
     }
 
@@ -786,16 +785,15 @@ h2::after {
     .nombres-novios {
         font-size: 6rem;
         letter-spacing: 1px;
-        line-height: 1.05;
+        line-height: 0.85;
     }
 
     .y-pequena {
         font-size: 0.7em;
-        margin-top: -35px;
     }
 
     .fecha-boda {
-        font-size: 0.85rem;
+        font-size: 1rem;
         letter-spacing: 1px;
     }
 
