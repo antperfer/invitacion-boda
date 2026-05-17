@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function cargarConfiguracion() {
     // Nombres - Formato: Elena arriba, y en medio (más pequeña), Antonio abajo
     const nombres = CONFIG.nombres.split(' y ');
-    const nombreFormateado = `${nombres[0]}<br><span class="y-pequena">y</span><br>${nombres[1]}`;
+    const nombreFormateado = `<span class="linea-nombre nombre-superior">${nombres[0]}</span><span class="linea-nombre y-pequena">y</span><span class="linea-nombre nombre-inferior">${nombres[1]}</span>`;
     document.getElementById('nombresNovios').innerHTML = nombreFormateado;
 
     // Fecha
